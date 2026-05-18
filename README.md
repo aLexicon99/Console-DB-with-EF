@@ -9,6 +9,21 @@ Console App with EntityFramework Core
 >> **IF** any table classes is updated or created/added then create a new migration by typing : `Add-Migration "informative message"`
 
 
+
+
+
+### Use the DbContext
+```csharp
+MyDbContext Context = new MyDbContext();
+```
+
+### Use/Assign table from DbContext with "DbSet"
+
+```java
+public DbSet<Rocket> Rockets { get; set; }
+``` 
+
+
 >>>Commonly used commands 
 
 ```
