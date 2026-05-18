@@ -10,8 +10,6 @@ namespace EntityFramework_ConsoleApp
     }
     internal class Program
     {
-        public static string DATABASE_NAME = "lex2026_ef;";
-        public static string ConnectionString = Environment.GetEnvironmentVariable("SQL_SERVER_STRING") + "Database=" + DATABASE_NAME;
         static void Main(string[] args)
         {
             MyDbContext Context = new MyDbContext();
@@ -32,7 +30,7 @@ namespace EntityFramework_ConsoleApp
 
             Console.WriteLine("Hello, Space!");
             Console.WriteLine("Total Rockets : " + allRockets.Count());
-            Console.WriteLine("First Rocket Name: " + firstRocket.RocketName);
+            //Console.WriteLine("First Rocket Name: " + firstRocket.RocketName);
             Console.WriteLine("\n--- All Rockets -----\n");
             allRockets.ForEach((r) => Console.WriteLine($"- {r.RocketName}, {r.RocketDescription}"));
         }

@@ -12,14 +12,14 @@ namespace EntityFramework_ConsoleApp
 {
     internal class MyDbContext : DbContext
     {
-        //readonly string DATABASE_NAME = "lex2026";
-        //string ConnectionString = "Data Source=.\\SQLEXPRESS;Database=lex2026;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=True;";
-        //string ConnectionString = Environment.GetEnvironmentVariable("SQL_SERVER_STRING") + "Database=" + "lex2026_ef;";
+        private static readonly string DATABASE_NAME = "lex2026_ef;";
+        static readonly string ConnectionString = Environment.GetEnvironmentVariable("SQL_SERVER_STRING") + "Database=" + DATABASE_NAME;
+
         public DbSet<Rocket> Rockets { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Program.ConnectionString);
+            optionsBuilder.UseSqlServer(ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder ModelBuilder)
