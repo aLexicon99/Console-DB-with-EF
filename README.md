@@ -6,7 +6,7 @@ Console App with EntityFramework Core
 > inside the "Package Management Console" type : 
 `update-database`
 
->> **IF** any table classes is updated or created/added then create a new migration by typing : `Add-Migration "informative message"`
+> **IF** any table classes is updated or created/added then create a new migration by typing : `Add-Migration "informative message"`
 
 
 
@@ -24,7 +24,7 @@ public DbSet<Rocket> Rockets { get; set; }
 ``` 
 
 
->>>Commonly used commands 
+>Commonly used commands 
 
 ```
 Add-Migration
