@@ -8,6 +8,7 @@ namespace EntityFramework_ConsoleApp
         static readonly string ConnectionString = Environment.GetEnvironmentVariable("SQL_SERVER_STRING") + "Database=" + DATABASE_NAME;
 
         public DbSet<Rocket> Rockets { get; set; }
+        public DbSet<Launch> Launches { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
