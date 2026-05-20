@@ -14,5 +14,7 @@ namespace EntityFramework_ConsoleApp
 
         [MaxLength(500)]
         public string? RocketDescription { get; set; }
+
+        public List<CrewMember>? CrewMembers { get; set; }
     }
 }
